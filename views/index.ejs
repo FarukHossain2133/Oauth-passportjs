@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<title><%= title %></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/images/statement.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+#text {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
+  padding: 20px;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.button:hover {
+  background-color: #222;
+  border: 1px solid white;
+  font-size: 28px;
+  color: #999;
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Faruk Hossain
+  </div>
+  <div class="w3-display-middle" id="text">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">35 days left</p>
+    <br>
+    <a href="/users/login" class="button">Login page</a>
+  </div>
+  <!-- <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div> -->
+</div>
+
+
+
+
+<%- include('template/footer.ejs') %>
